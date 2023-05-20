@@ -68,44 +68,44 @@
                  <span style="opacity: 0.4;">Show locator</span>
                 </div>
                 
+                <div class="sm-wrapper g-3">
+                  <i class="fa-brands fa-twitter"></i>
+                  <i class="fa-brands fa-instagram"></i>
+                  <i class="fa-brands fa-youtube"></i>
+                </div>
           </div>
           
           <div id="Men" class="tabcontent">
-            <button class="dropdown-btn">New
+            <button class="dropdown-btn pt-3">New
                 <i class="fa-solid fa-chevron-down"></i>
               </button>
-              <button class="dropdown-btn">T-Shirts
+              <button class="dropdown-btn pt-3">T-Shirts
                 <i class="fa-solid fa-chevron-down"></i>
               </button>
-              <button class="dropdown-btn">Pants
+              <button class="dropdown-btn pt-3">Pants
                 <i class="fa-solid fa-chevron-down"></i>
               </button>
           </div>
           
           <div id="Kids" class="tabcontent">
-            <button class="dropdown-btn">New
+            <button class="dropdown-btn pt-3">New
                 <i class="fa-solid fa-chevron-down"></i>
               </button>
-              <button class="dropdown-btn">Apparel
+              <button class="dropdown-btn pt-3">Apparel
                 <i class="fa-solid fa-chevron-down"></i>
               </button>
-              <button class="dropdown-btn">Shoes
+              <button class="dropdown-btn pt-3">Shoes
                 <i class="fa-solid fa-chevron-down"></i>
               </button>
           </div>
       
       </div>
-      <div id ="myCart" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
-      </div>
-      
       <!-- Use any element to open/show the overlay navigation menu -->
       <span class="fa-solid fa-bars p-4" onclick="openNav()"></span>
        <span><img src="assets\images\Logo (1).png" alt="logo" style = "height: 40px;" class="logo ml-2 pt-3"></span>
        <div class="icons pr-3">
       <span class="fa-solid fa-magnifying-glass pt-4 pr-2"></span>
-      <span class="fa-solid fa-bag-shopping pt-4 pr-2"></span>
+      <span id="shopping-bag" class="fa-solid fa-bag-shopping pt-4 pr-2"></span>
     </div>
     </div>
     </header>
@@ -115,27 +115,27 @@
 
     <!-- Full-width images with number and caption text -->
     <div class="mySlides">
-      <div class="numbertext">1 / 5</div>
+      <div class="numbertext"></div>
       <img src="assets\images\Rectangle 344.png" style="width:100%">
     </div>
   
     <div class="mySlides">
-      <div class="numbertext">2 / 5</div>
+      <div class="numbertext"></div>
       <img src="assets\images\Rectangle 344.png" style="width:100%">
     </div>
   
     <div class="mySlides">
-      <div class="numbertext">3 / 5</div>
+      <div class="numbertext"></div>
       <img src="assets\images\Rectangle 344.png" style="width:100%">
   </div>
 
   <div class="mySlides">
-    <div class="numbertext">4 / 5</div>
+    <div class="numbertext"></div>
     <img src="assets\images\Rectangle 344.png" style="width:100%">
 </div>
 
 <div class="mySlides">
-    <div class="numbertext">5 / 5</div>
+    <div class="numbertext"></div>
     <img src="assets\images\Rectangle 344.png" style="width:100%">
 </div>
   <br>
@@ -152,16 +152,109 @@
    <div class="item-wrapper">
    <h2>Mohan</h2>
    <p>Recycle Boucle Knit Cardigan Pink</p>
-   <span>$120</span>
-    <div class="color-wrapper d-flex pt-3">
+   <span class="price">$120</span>
+
+   <div class="specs-wrapper d-flex">
+    <div class="color-wrapper d-flex">
       <p>Color</p>
+      <div>
         <button class="button button-1"></button>
         <button class="button button-2"></button>
         <button class="button button-3"></button>
+      </div>
     </div>
+
+    <div class="size-wrapper d-flex">
+      <p>Size</p>
+      <div>
+        <button class="button button-s">S</button>
+        <button class="button button-m">M</button>
+        <button class="button button-l">L</button>
+      </div>
+   </div>
+
+  </div>
    </div>
    </div>
-   </div>
+    </div>
+
+    <footer>
+      <div class="container3 d-flex justify-content-between align-items-baseline">
+        <div class="basket d-flex align-items-baseline ml-3">
+        <i class="fa-solid fa-plus  pt-4"></i>
+        <p class="Add basket">ADD TO BASKET</p>
+      </div>
+
+    <i class="fa-regular fa-heart mr-3" ></i>
+
+
+
+    <div class=" floater">
+      <div class="d-flex justify-content-center mt-3 "><i class="fa-solid fa-plus increment_price"></i><p class="product_count mx-2 "></p><i class="fa-solid fa-minus decrement_price"></i></div>
+    </div>
+      </div>
+
+
+      <div class="full_cart ">
+        <div class="upper_section mx-3 mt-3">
+          <img src="assets\images\Rectangle 344.png" class="mb-4 close_sign">
+          <h5 class=""> C A R T</h5>
+        </div>
+        <div class="middle_section mx-3 d-flex ">
+          <div class="float "><div class=" mt-5 d-flex justify-content-center"><p class="text-secondary">You have no items in your shopping cart</p></div></div>
+          <img src="assets\images\Rectangle 344.png">
+          <div class="d-flex flex-column mx-3">
+            <h5>M O H A N</h5>
+            <p class="text-secondary ">Recycle boucle Knit cardigan beige</p>
+            <div class="d-flex justify-content-start mt-2 "><i class="fa-solid fa-plus increment_price"></i><p class="product_count mx-2 "></p><i class="fa-solid fa-minus decrement_price"></i></div>
+            <div class="price_tag">$<span class="price">120</span></div>
+          </div>
+        </div>
+    
+        <div class="d-flex flex-row child_wrapper mx-3 generic_negative_margin  ">
+          <div class="d-flex flex-row mt-1">
+              <span class="text-secondary">Color</span>
+              <div class="colored_div mx-1" ></div>
+              <div class="colored_div mx-1"></div>
+              <div class="colored_div mx-1"></div>
+          </div>
+          <div class="d-flex flex-row  ml-2 mt-1" >
+            <span class="text-secondary px-1">Size</span>
+            <div data-id=1 class="size_div mx-1  ">S</div>
+            <div data-id=2 class="size_div mx-1">M</div>
+            <div data-id=3 class="size_div mx-1">L</div>
+          </div>
+        </div>
+        
+    
+        <div class="lower_section mx-3 ">
+          <div class="d-flex flex-row justify-content-between border-top pt-4 mt-5 mb-3">
+            <h5> SUB TOTAL</h5> 
+            <div class="price_tag">$<span class="price">120</span>
+            </div>
+          </div>
+          <p class="text-secondary">*shipping charges, taxes and discount codes are calculated at the time of accounting. </p>
+        </div>
+    
+        <div class="container third_section mt-4 ">
+          <div class="float"><p class="text-secondary">You have no items in your shopping cart</p></div>
+    
+          <div class="d-flex flex-row justify-content-center align-items-center py-2">
+            <div class="buy_btn pt-2"><h5>BUY NOW</h5></div>
+    
+          </div>
+    
+          
+    
+    
+        </div>
+      </div>
+  
+        </div>
+  
+
+      
+    </footer>
 
 
 <script src="script.js"></script>

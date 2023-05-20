@@ -8,12 +8,7 @@ function openNav() {
     document.getElementById("myNav").style.width = "0%";
   }
 
-  function openCart() {
-    document.getElementById("myCart").style.width = "100%";
-  }
-  function closeCart() {
-    document.getElementById("myCart").style.width = "0%";
-  }
+
  function openMenu(evt, genderName) {
   // Declare all variables
   var i, tabcontent, tablinks;
@@ -73,3 +68,42 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+var floater=document.querySelector(".floater")
+
+      var addBasket=document.querySelector(".fa-solid.fa-plus")
+      addBasket.onclick=function(){
+        floater.style.display="block"
+      }
+
+      var product_incrementer=document.querySelectorAll(".increment_price")
+      var product_decrementer=document.querySelectorAll(".decrement_price")
+      var product_cnt=document.querySelectorAll(".product_count")
+      var counter=1;
+      var actual_price=120;
+      var price_tag=document.querySelectorAll(".price")
+        
+      product_cnt.forEach(counte=>{counte.innerHTML=counter})
+      
+      product_incrementer.forEach(increment=>{increment.onclick=()=>{counter++;
+        product_cnt.forEach(counte=>{counte.innerHTML=counter})
+        price_tag.forEach(tag=>{tag.innerHTML=actual_price*counter;})}})
+      product_decrementer.forEach(decrement=>{decrement.onclick=()=>{
+          if(counter==0){
+            floater.style.display="none"
+          }
+          else{
+            counter--
+          }
+         product_cnt.forEach(counte=>{counte.innerHTML=counter})
+         price_tag.forEach(tag=>{tag.innerHTML=actual_price*counter;})
+        }})
+
+
+        var cart_terminator=document.querySelector(".close_sign")
+        var entire_cart=document.querySelector(".full_cart")
+
+        cart_terminator.onclick=function(){
+          entire_cart.style.zIndex="-1"
+          entire_cart.style.opacity="0"
+        }
